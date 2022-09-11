@@ -16,3 +16,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.selected-row {
+    --bs-table-accent-bg: black !important;
+    color: white !important;
+}

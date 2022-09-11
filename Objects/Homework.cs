@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TodoApp.Objects
 {
@@ -12,8 +13,12 @@ namespace TodoApp.Objects
         public string Title { get; set; }
 
         [Column("date_created")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DateCreated { get; set; } = DateTime.Now;
+
         [Column("date_modified")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+
         public DateTime DateModified { get; set; } = DateTime.Now;
     }
 }
